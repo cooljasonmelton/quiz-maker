@@ -1,25 +1,9 @@
-# README
+# quiz maker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+2 Sides to Website:
 
-Things you may want to cover:
+### Teacher Side:
 
-* Ruby version
+### Student Side:
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# quiz-maker
