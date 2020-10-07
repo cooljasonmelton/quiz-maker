@@ -1,25 +1,54 @@
-# README
+# quiz maker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+2 Sides to Website:
 
-Things you may want to cover:
+### Teacher Side:
+-teacher login
+-create courses
+-create quizzes
 
-* Ruby version
+### Student Side:
 
-* System dependencies
+Models:
+# -teacher 
+    -> (course)
+attr:
+id, name
 
-* Configuration
+# -course 
+    -> (student)
+    -> (quiz)
+attr:
+id, name, subject, description, teacher_id
 
-* Database creation
+# - course_student (join)
+    -> course
+    -> student
+attr:
+student_id, course_id
 
-* Database initialization
+# -student
+    <-> (course)
+    <-> (quiz) (student_quiz)
+attr:
+id, name
 
-* How to run the test suite
+# -student_quiz (join)
+    -> quiz 
+    -> student
+attr:
+student_id, quiz_id
 
-* Services (job queues, cache servers, search engines, etc.)
+# -quiz
+    <-> (student) (student_quiz)
+attr
+id, name, course_id
 
-* Deployment instructions
+# -question
+    -> choice
+attr
+id, text, answer, quiz_id
 
-* ...
-# quiz-maker
+# -choice
+attr
+id, text, question_id
