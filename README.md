@@ -4,41 +4,51 @@
 
 ### Teacher Side:
 -teacher login
--create classes
+-create courses
 -create quizzes
 
 ### Student Side:
 
 Models:
--teacher 
-    -> (class)
+# -teacher 
+    -> (course)
 attr:
 id, name
 
--class 
+# -course 
     -> (student)
     -> (quiz)
 attr:
-id, name, subject, description
+id, name, subject, description, teacher_id
 
--student
-    -> (class)
+# - course_student (join)
+    -> course
+    -> student
+attr:
+student_id, course_id
+
+# -student
+    <-> (course)
     <-> (quiz) (student_quiz)
 attr:
 id, name
 
--student_quiz (join)
+# -student_quiz (join)
     -> quiz 
     -> student
+attr:
+student_id, quiz_id
 
--quiz
+# -quiz
     <-> (student) (student_quiz)
+attr
+id, name, course_id
 
--question
+# -question
     -> choice
 attr
-id, text, answer
+id, text, answer, quiz_id
 
--choice
+# -choice
 attr
-id, text
+id, text, question_id
