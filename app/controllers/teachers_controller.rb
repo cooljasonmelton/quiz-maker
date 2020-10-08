@@ -1,6 +1,7 @@
 class TeachersController < ApplicationController
     def index
-        @teachers = Teacher.all
+        # sort by teacher last name
+        @teachers = Teacher.all.sort_by {|t| t.name.split(' ')[-1]}
     end 
 
     def show

@@ -1,5 +1,11 @@
 # quiz maker
 
+
+### Navbar
+
+login
+
+
 2 Sides to Website:
 
 ### Teacher Side:
@@ -9,6 +15,18 @@
 
 ### Student Side:
 
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////
 Models:
 # -teacher 
     -> (course)
